@@ -1,30 +1,13 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import ImageData from "./Image";
+import Top from "./Top";
 
 function Card() {
   const KEY = "4034a0257120e649cb4d522b971c740c";
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
   const [current, setCurrent] = useState(null);
-
-  // const [data, setData] = useState([]);
-
-  // const getData = async () => {
-  //   try {
-  //     const res = await fetch(
-  //       "https://api.openweathermap.org/data/2.5/forecast?q=lima&appid=${KEY}&units=metric"
-  //     );
-  //     const resJson = await res.json();
-  //     setData(resJson);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   getData();
-  // }, []);
 
   useEffect(() => {
     if (lat === null && long === null) return;
@@ -96,29 +79,9 @@ function Card() {
       </div>
 
       <div className="body">
-        {/* {data.map((el, index) => {
-          return (
-            <div className="layout2">
-              <div>
-                <h3 className="tit">
-                  <strong>Tomorrow</strong>
-                </h3>
-              </div>
-              <div>
-                <p>2</p>
-              </div>
-              <div>
-                <p>3</p>
-              </div>
-              <div>
-                <p>4</p>
-              </div>
-              <div>
-                <p>5</p>
-              </div>
-            </div>
-          );
-        })} */}
+        <div>
+          <Top />
+        </div>
 
         <div className="abajo">
           <h1>Today's Hightlights</h1>
