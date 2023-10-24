@@ -1,9 +1,7 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
+* {
+  font-family: "Raleway", sans-serif;
+}
+
 .layout {
   width: 1350px;
   height: 586px;
@@ -11,7 +9,7 @@
   display: grid;
   grid:
     "sidebar body" 1fr
-    / 0.4fr 1fr;
+    / 0.2fr 1fr;
 }
 
 .sidebar {
@@ -19,18 +17,30 @@
   color: white;
   background: #1e213a;
   position: relative;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-.body {
-  grid-area: body;
-  background-color: #100e1d;
-  color: white;
-}
-.fondo {
-  background-image: url("/weather-app-master/Cloud-background.png");
 
+.caja {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+}
+
+.fondo {
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+}
+
+/* .fondo {
+  background-image: url("/weather-app-master/Cloud-background.png");
   background-size: cover;
   opacity: 0.1;
   width: 100%;
@@ -43,9 +53,53 @@
   left: 0;
   width: 100%;
   height: 100%;
+} */
+
+/* .logo {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  position: absolute;
+  top: -130px;
+  left: 0;
+  z-index: 1;
+}*/
+
+.logo img {
+  width: 130px;
+  height: 130px;
 }
 
-.cards {
+.fondo img {
+  width: 300px;
+  height: 300px;
+}
+
+.nav1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 40px 40px;
+}
+
+.nav1 .bt2 {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  line-height: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 5px;
+}
+
+.nav1 .bt1 {
+  background-color: grey;
+  color: white;
+}
+
+/* .cards {
   display: flex;
   background-color: aqua;
 }
@@ -59,4 +113,10 @@
 #cards > div:first-child {
   height: 75%;
   text-align: center;
+} */
+
+.body {
+  grid-area: body;
+  background-color: #100e1d;
+  color: white;
 }
