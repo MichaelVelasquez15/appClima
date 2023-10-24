@@ -13,7 +13,7 @@ function Card() {
   // const getData = async () => {
   //   try {
   //     const res = await fetch(
-  //       "https://api.openweathermap.org/data/2.5/forecast?q=lima&appid=4034a0257120e649cb4d522b971c740c&units=metric"
+  //       "https://api.openweathermap.org/data/2.5/forecast?q=lima&appid=${KEY}&units=metric"
   //     );
   //     const resJson = await res.json();
   //     setData(resJson);
@@ -119,7 +119,8 @@ function Card() {
             </div>
           );
         })} */}
-        <div>
+
+        <div className="abajo">
           <h1>Today's Hightlights</h1>
           <div className="cards">
             <div>
@@ -128,11 +129,17 @@ function Card() {
                 <strong>{current.wind.speed + " mph"}</strong>
               </p>
             </div>
-            <div>
+            <div className="ba">
               <h4>Humidity</h4>
               <p>
-                <strong>{current.main.humidity + " %"}</strong>{" "}
+                <strong>{current.main.humidity + " %"}</strong>
               </p>
+              <div className="barra">
+                <div
+                  className="porcen"
+                  style={{ width: `${current.main.humidity}%` }}
+                ></div>
+              </div>
             </div>
             <div>
               <h4>Visibility</h4>
@@ -156,23 +163,3 @@ function Card() {
 export default Card;
 
 <main className="container"></main>;
-
-{
-  /* <div className="car" key={index}>
-<div className="DivImg">
-  <img src={el.flags.png} alt={el.name.official}></img>
-</div>
-<div className="DivText">
-  <h3 className="tit">
-    <strong>{el.name.official}</strong>
-  </h3>
-  <ul>
-    <li>Population: {el.population}</li>
-    <br />
-    <li>Region: {el.region}</li>
-    <br />
-    <li>Capital: {el.capital}</li>
-  </ul>
-</div>
-</div> */
-}
